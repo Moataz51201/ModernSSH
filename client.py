@@ -45,7 +45,7 @@ def encrypt_aes_key(aes_key, server_public_key):
     return base64.b64encode(cipher_rsa.encrypt(aes_key)).decode()
 
 
-def start_secure_client(host='192.168.188.148', port=5555):
+def start_secure_client(host='<IP>', port=5555):
     server_public_key = load_server_public_key()
     sslctx = create_ssl_context()
     raw = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

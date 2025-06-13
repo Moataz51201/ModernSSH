@@ -34,3 +34,9 @@ Client <====== TLS (X.509) ======> Server
   │                                  ├── Decrypts & validates credentials
   ├── AES-EAX: Encrypts commands     ├── Executes or rejects commands
   ├── Reads AES-EAX encrypted reply  └── Sends authenticated output
+  
+  # POC :
+  ![test1](https://github.com/user-attachments/assets/5b1d1807-97c2-47a9-96be-e7d086fbb144)
+![test4](https://github.com/user-attachments/assets/65467d10-1b89-4bba-a7d0-fb0d12473040)
+![test3](https://github.com/user-attachments/assets/2781cd69-76cd-43e2-846b-29824a472590)
+![test2](https://github.com/user-attachments/assets/58fc314c-36b6-4b2f-88de-6d40e0753841)

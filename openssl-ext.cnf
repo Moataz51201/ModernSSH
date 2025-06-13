@@ -28,4 +28,4 @@ extendedKeyUsage        = clientAuth
 
 [ alt_names ]
 DNS.1 = your.server.name
-IP.1  = 192.168.188.148
+IP.1  = <IP>

@@ -217,8 +217,9 @@ def handle_client(client_socket, addr, server_private_key):
             response_cipher = AES.new(aes_key, AES.MODE_EAX)
             enc_result, resp_tag = response_cipher.encrypt_and_digest(result.encode())
             response_packet = response_cipher.nonce + resp_tag + enc_result
-            client_socket.sendall(base64.b64encode(response_packet))
-
+            b64_payload = base64.b64encode(response_packet)
+            length_prefix = len(b64_payload).to_bytes(4, 'big')  
+            client_socket.sendall(length_prefix + b64_payload)
     except Exception as e:
         logging.error(f"Error handling client {ip}: {e}")
     finally:
